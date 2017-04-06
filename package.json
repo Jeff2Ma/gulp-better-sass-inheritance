@@ -1,31 +1,32 @@
 {
-    "name": "gulp-better-sass-inheritance",
-    "version": "0.0.1",
-    "description": "Recompile only changed sass/scss files and their dependencies (extended, included or imported)",
-    "main": "index.js",
-    "repository": {
-        "type": "git",
-        "url": "git@github.com:Jeff2Ma/gulp-better-sass-inheritance.git"
-    },
-    "keywords": [
-        "gulpplugin",
-        "sass",
-        "sass-inheritance",
-        "sass-graph",
-        "gulp-sass-graph",
-        "sass-dependencies",
-        "gulp-cached"
-    ],
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Jeff2Ma/gulp-better-sass-inheritance/issues"
-    },
-    "homepage": "https://github.com/Jeff2Ma/gulp-better-sass-inheritance",
-    "dependencies": {
-        "event-stream": "^3.3.4",
-        "lodash": "^4.17.4",
-        "sass-graph": "^2.1.2",
-        "through2": "^2.0.3",
-        "vinyl-fs": "^2.4.4"
-    }
+  "name": "gulp-better-sass-inheritance",
+  "version": "0.0.1",
+  "description": "Recompile only changed sass/scss files and their dependencies (extended, included or imported)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Jeff2Ma/gulp-better-sass-inheritance.git"
+  },
+  "keywords": [
+    "gulpplugin",
+    "sass",
+    "sass-inheritance",
+    "sass-graph",
+    "gulp-sass-graph",
+    "sass-dependencies",
+    "gulp-cached"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jeff2Ma/gulp-better-sass-inheritance/issues"
+  },
+  "homepage": "https://github.com/Jeff2Ma/gulp-better-sass-inheritance",
+  "dependencies": {
+    "event-stream": "^3.3.4",
+    "gulp-util": "^3.0.8",
+    "lodash": "^4.17.4",
+    "sass-graph": "^2.1.2",
+    "through2": "^2.0.3",
+    "vinyl-fs": "^2.4.4"
+  }
 }

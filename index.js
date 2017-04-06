@@ -1,10 +1,13 @@
 'use strict';
 
+var path = require('path');
 var es = require('event-stream');
 var _ = require('lodash');
 var vfs = require('vinyl-fs');
 var through2 = require('through2');
 var sassGraph = require('sass-graph');
+var gutil = require('gulp-util');
+var PluginError = gutil.PluginError;
 var PLUGIN_NAME = 'gulp-better-sass-inheritance';
 
 var stream;
@@ -15,6 +18,14 @@ function gulpBetterSassInheritance(options) {
 	var files = [];
 	var filesPaths = [];
 	var graph;
+
+	if (!options.base) {
+		throw new PluginError(PLUGIN_NAME, 'Missing option `base`!');
+	}
+
+	var basePath = path.resolve(process.cwd(), options.base);
+
+	// gutil.log(basePath)
 
 	function writeStream(currentFile) {
 		if (currentFile && currentFile.contents.length) {
@@ -29,8 +40,8 @@ function gulpBetterSassInheritance(options) {
 				var fullpaths = graph.index[filePath].importedBy;
 
 				if (options.debug) {
-					console.log('File', filePath);
-					console.log(' - importedBy', fullpaths);
+					gutil.log('File \"', gutil.colors.magenta(path.relative(basePath, filePath)), '\"');
+					gutil.log(' - importedBy', fullpaths);
 				}
 				filesPaths = _.union(filesPaths, fullpaths);
 			}
@@ -43,13 +54,13 @@ function gulpBetterSassInheritance(options) {
 
 	function endStream() {
 		if (files.length) {
-			graph = sassGraph.parseDir(options.dir, options);
+			graph = sassGraph.parseDir(options.base, options);
 
 			check(_.map(files, function (item) {
 				return item.path;
 			}));
 
-			vfs.src(filesPaths, {'base': options.dir})
+			vfs.src(filesPaths, {'base': options.base})
 				.pipe(es.through(
 					function (f) {
 						stream.emit('data', f);
