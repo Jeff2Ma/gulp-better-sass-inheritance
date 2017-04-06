@@ -6,7 +6,17 @@ Based on [gulp-sass-inheritance-plus](https://www.npmjs.com/package/gulp-sass-in
 
 Solve the bugs in based plugin and make better performace.
 
+NPM Page: [https://www.npmjs.com/package/gulp-better-sass-inheritance](https://www.npmjs.com/package/gulp-better-sass-inheritance)
+
 ## Usage
+
+### Install
+
+```bash
+npm i gulp-better-sass-inheritance -D
+```
+
+### Gulp file
 
 ```javascript
 var gulp = require('gulp');
