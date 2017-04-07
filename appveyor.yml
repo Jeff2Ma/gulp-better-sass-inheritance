@@ -44,7 +44,7 @@ test_script:
   - node --version && npm --version
   - npm i
   - pwd
-  - gulp test
+  - npm test
 
 # Don't actually build.
 build: off
