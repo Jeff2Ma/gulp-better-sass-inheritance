@@ -4,7 +4,6 @@ var path = require('path');
 var es = require('event-stream');
 var _ = require('lodash');
 var vfs = require('vinyl-fs');
-var through2 = require('through2');
 var sassGraph = require('sass-graph');
 var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;

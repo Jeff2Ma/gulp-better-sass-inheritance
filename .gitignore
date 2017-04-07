@@ -8,6 +8,5 @@ dist/
 .git
 old
 tt.js
-_*.*
 *.css.map
 output.css
