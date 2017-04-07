@@ -1,6 +1,6 @@
 {
   "name": "gulp-better-sass-inheritance",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Recompile only changed sass/scss files and their dependencies (extended, included or imported)",
   "main": "index.js",
   "repository": {
