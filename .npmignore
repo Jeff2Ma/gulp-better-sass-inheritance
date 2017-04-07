@@ -1,0 +1,12 @@
+.gitignore
+.editorconfig
+.eslintrc
+.idea
+node_modules/
+npm-debug.log
+CHANGELOG.md
+test
+examples
+gulpfile.js
+.travis.yml
+appveyor.yml
