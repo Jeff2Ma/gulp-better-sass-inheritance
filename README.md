@@ -4,26 +4,21 @@
 [![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/Jeff2Ma/gulp-better-sass-inheritance?branch=master&svg=true)](https://ci.appveyor.com/project/Jeff2Ma/gulp-better-sass-inheritance)
 [![npm version](https://badge.fury.io/js/gulp-better-sass-inheritance.svg)](https://www.npmjs.com/package/gulp-better-sass-inheritance)
 
-> Recompile only changed sass/scss files and their dependencies (extended, included or imported).
+> Recompile only changed sass/scss files and their dependencies (imported, extended, or included).
 
 Based on [gulp-sass-inheritance-plus](https://www.npmjs.com/package/gulp-sass-inheritance-plus).
 
-Solve the bugs in based plugin and make better performace.
+Solve the bugs in based plugin and make more test. Last but not least, better performace.
 
-NPM Page: [https://www.npmjs.com/package/gulp-better-sass-inheritance](https://www.npmjs.com/package/gulp-better-sass-inheritance)
-
-## Usage
-
-### Install
+## Installation
 
 ```bash
 npm i gulp-better-sass-inheritance -D
 ```
 
-### Gulp file
+## Usage
 
-Suggest to work with [gulp-sass](https://www.npmjs.com/package/gulp-sass).
-
+Suggest to work with [gulp-sass](https://www.npmjs.com/package/gulp-sass) and [gulp-cached](https://www.npmjs.com/package/gulp-cached).
 
 ```javascript
 var gulp = require('gulp');
